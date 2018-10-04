@@ -34,6 +34,10 @@ p {
 .clear-left {
 	justify-content: flex-start !important;
 }
+.middle-it {
+	justify-content: center;
+	align-items: center;
+}
 ul {
 	list-style: none;
 }
@@ -71,7 +75,7 @@ header > .top--menu > ul > li:last-child > a {
 	z-index: 997;
 }
 #header.header-scrolled {
-box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.22);
+box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.12);
 background: rgba(34, 34, 34, 0.9);
 transition: opacity 500ms ease;
 }
@@ -305,7 +309,8 @@ ul.testimonials > li {
 	margin-bottom: 1rem;
 }
 ul.testimonials > li > a > .testify-card,
-ul.announcements > li > .card {
+ul.announcements > li > .card,
+ul.course-spec > li > .card {
 	background: #fff;
 	border-radius: .4rem;
 	padding: 1.5rem;
@@ -320,14 +325,19 @@ ul.announcements > li > .card > .card-head {
 	display: flex;
 }
 ul.testimonials > li > a > .testify-card > .card--head, 
-ul.announcements > li > .card > .card-head {
+ul.announcements > li > .card > .card-head,
+ul.course-spec > li > .card > .card--head {
 	margin-bottom: 1rem;
 }
 ul.announcements > li > .card > .card-head {
-	justify-content: space-between
+	justify-content: space-between;
+}
+ul.course-spec > li > .card > .card--head {
+	justify-content: center;
 }
 ul.testimonials > li > a > .testify-card > .card--head > img,
-ul.testimonials > li > a > .testify-card > .card--bottom > img {
+ul.testimonials > li > a > .testify-card > .card--bottom > img,
+ul.course-spec > li > .card > .card--head > img {
 	width: 70px;
 	border-radius: .25rem;
 	margin-right: 1rem;
@@ -442,6 +452,59 @@ div.cta-section h2 {
 	line-height: 1.2;
 	letter-spacing: .15rem;
 	font-weight: 400;
+}
+.lesson-card {
+	background: white;
+	color: #111;
+	border-radius: .3rem;
+	padding: 1.5rem;
+	display: flex;
+}
+.lesson-card > .card--caption {
+	width: 62%
+}
+.lesson-card > .card--show {
+	display: flex;
+}
+.lesson-card > .card--show > img {
+	margin-right: 2rem;
+}
+.lesson-card > .card--show > h2 {
+	font-size: 1.6rem;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0;
+}
+.lesson-card > .card--show > h2 small {
+	font-size: 65%;
+	opacity: .5;
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+	padding-top: .3rem;
+}
+.lesson-card h2 {
+	font-size: 3rem;
+	font-weight: 300;
+	margin-bottom: .8rem;
+}
+.lesson-card p {
+	text-align: left;
+	font-size: 18px;
+}
+ul.course-spec {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 7rem;
+}
+ul.course-spec > li {
+	max-width: 31%;
+	color: #111;
+}
+.transparent-card {
+	background-color: transparent;
+	border: 1px solid #f5f5f580;
+	color: #fff;
 }
 /* Footer */
 footer {
