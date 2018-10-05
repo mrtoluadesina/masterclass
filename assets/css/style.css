@@ -100,6 +100,7 @@ header > .top--menu ul > li {
 	letter-spacing: .2rem;
 	align-items: center;
 	display: flex;
+	cursor: pointer;
 }
 #header {
 	position: fixed;
@@ -199,6 +200,7 @@ body.mobile-search-active #mobile-search {
     padding: .6rem 0;
 	font-size: 1rem;
 	letter-spacing: .2rem;
+	cursor: pointer;
 }
 #mobile-nav ul li.search {
     display: none;
@@ -712,7 +714,7 @@ article.course-action .a-third > .third--head > img {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-	width: 45%;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
@@ -988,6 +990,9 @@ footer ul li {
 	}
 	div.scroll > ul.course-slider > li > a > .course .caption .caption-subtitle {
 		display: flex;
+	}
+	.modal-content {
+		width: 40%;
 	}
 }
 @media (min-width: 780px) and (max-width: 1050px){
