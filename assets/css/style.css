@@ -691,6 +691,119 @@ article.course-action .a-third > .third--head > img {
 	width: 50px;
 	border-radius: .25rem;
 }
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1005; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+/* The Close Button */
+.close {
+    color: #111;
+    float: right;
+    font-size: 28px;
+	font-weight: bold;
+	position: absolute;
+	right: .3rem;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header, .modal-footer {
+    padding: 2px 16px;
+    color: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-align: center;
+	letter-spacing: .08rem;
+}
+.modal-body {
+	padding: 1rem 2rem;
+	display: flex;
+	flex-direction: column;
+}
+.social-login {
+	text-transform: none;
+	letter-spacing: .1rem;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	font-weight: 500;
+}
+.login-input {
+	border-radius: .3rem;
+	border: 1px solid #dbdbdb;
+	padding: .7rem .5rem;
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+.social-login i {
+	margin: -.1em 1em 0 0;
+	font-size: 1.5rem;
+}
+.login-facebook {
+	background-color: #3a5998;
+	margin-bottom: .5rem;
+}
+p.divider {
+	color: #939393;
+	text-align: center;
+	margin: 1.1rem 0;
+	position: relative;
+}
+p.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(77,87,104,0.2);
+    z-index: -1;
+}
+p.divider span {
+	padding: .5em 1em;
+	background: #fff;
+}
 /* Footer */
 footer {
 	display: flex;

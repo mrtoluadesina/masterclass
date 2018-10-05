@@ -22,9 +22,9 @@
 						<input class="search-input" type="text" placeholder="SEARCH">
 						<input class="search-btn" type="button" value="Go">
 					</li>
-					<li><a href="#">LESSONS</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">LOG IN</a></li>
+					<li><a href="">LESSONS</a></li>
+					<li><a href="">FAQ</a></li>
+					<li id="myBtn"><a href="javascript:void(0);">LOG IN</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -37,11 +37,6 @@
 		</div>
 	</header>
 	<section class="hero">
-		<!-- <picture>
-			<source srcset="assets/img/buboox-banner.jpg" media="(min-width: 1200px)">
-			<source srcset="assets/img/buboox-banner-400.jpg" media="(min-width: 700px)">
-			<img src="assets/img/buboox-banner-201.jpg" alt="hero banner">
-		</picture> -->
 		<img class="show-course" src="" alt="banner">
 	</section>
 	<section class="slider">
@@ -496,7 +491,25 @@
 			<li><a href="#">℞</a></li>
 		</ul>
 	</footer>
-
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+			<span class="close">&times;</span>
+			<h2>LOG IN</h2>
+			</div>
+			<div class="modal-body">
+				<button class="social-login btn-mc login-facebook"><i class="fa fa-facebook"></i>Continue with Facebook</button>
+				<p class="divider"><span>OR</span></p>
+				<input class="login-input" type="text" placeholder="Email">
+				<input class="login-input" type="text" placeholder="Password">
+				<button class="social-login btn-mc">LOG IN</button>
+			</div>
+			<div class="modal-footer">
+			<h3>Need an account? Create an account.</h3>
+			</div>
+		</div>
+	</div>
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="assets/js/main.js"></script>	
 </body>
