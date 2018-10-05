@@ -47,9 +47,6 @@ p {
 ul {
 	list-style: none;
 }
-li.search {
-	display: flex;
-}
 input.search-input {
 	background: transparent;
 	border: 0;
@@ -202,7 +199,7 @@ body.mobile-search-active #mobile-search {
 	letter-spacing: .2rem;
 	cursor: pointer;
 }
-#mobile-nav ul li.search {
+#mobile-nav ul li.search, #mobile-nav ul li#myBtn {
     display: none;
 }
 #mobile-body-overly {
@@ -693,6 +690,21 @@ article.course-action .a-third > .third--head > img {
 	width: 50px;
 	border-radius: .25rem;
 }
+button#myBtn2 {
+	position: fixed;
+	color: #fff;
+	right: 40px;
+	z-index: 999;
+	top: 12px;
+	border: 0;
+	background: none;
+	font-size: 14px;
+	display: flex;
+	transition: all 0.4s;
+	outline: none;
+	cursor: pointer;
+	align-items: center;
+}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -990,6 +1002,9 @@ footer ul li {
 	}
 	div.scroll > ul.course-slider > li > a > .course .caption .caption-subtitle {
 		display: flex;
+	}
+	button#myBtn2 {
+		display: none;
 	}
 	.modal-content {
 		width: 40%;

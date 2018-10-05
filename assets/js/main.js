@@ -31,6 +31,7 @@ $(document).ready(function(){
     });
     $('body').append($mobile_nav);
     $('body').append($mobile_search);
+    $('body').prepend('<button type="button" id="myBtn2">LOG IN</button>');
     $('body').prepend('<button type="button" id="search-toggle"><i class="fa fa-search"></i></button>');
     $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>');
     $('body').append('<div id="mobile-body-overly"></div>');
@@ -46,12 +47,14 @@ $(document).ready(function(){
       $('body').toggleClass('mobile-nav-active');
       $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
       $('#mobile-body-overly').toggle();
+      $('#search-toggle, #myBtn2').toggle();
     });
 
     $(document).on('click', '#search-toggle', function(e) {
       $('body').toggleClass('mobile-search-active');
       $('#search-toggle i').toggleClass('fa-times fa-search');
       $('#mobile-body-overly').toggle();
+      $('#mobile-nav-toggle, #myBtn2').toggle();
     });
 
     $(document).click(function(e) {
@@ -61,6 +64,7 @@ $(document).ready(function(){
           $('body').removeClass('mobile-nav-active');
           $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
           $('#mobile-body-overly').fadeOut();
+          $('#search-toggle, #myBtn2').toggle();
         }
       }
     });
@@ -72,6 +76,7 @@ $(document).ready(function(){
           $('body').removeClass('mobile-search-active');
           $('#search-toggle i').toggleClass('fa-times fa-search');
           $('#mobile-body-overly').fadeOut();
+          $('#mobile-nav-toggle, #myBtn2').toggle();
         }
       }
     });
@@ -92,7 +97,7 @@ $(document).ready(function(){
 
     // Modal
     $(document).ready(function(){
-        $('#myBtn').click(function(){
+        $('#myBtn, #myBtn2').click(function(){
             $('#myModal').show();
         });
         $('span.close').click(function(){
