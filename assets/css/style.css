@@ -21,6 +21,10 @@ a {
 	opacity: 0.9;
 	color: inherit;
 }
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
 p {
 	font-size: 16px;
 	text-align: center;
@@ -84,10 +88,13 @@ header {
 	padding: 0 .5rem;
 	font-size: 14px;
 	letter-spacing: .2rem;
+	margin-bottom: 0;
 }
 header > .top--menu {
     display: flex;
-    justify-content: center;
+	justify-content: center;
+	top: .1rem;
+	position: relative;
 }
 header > .top--menu ul {
 	display: flex;
@@ -106,12 +113,12 @@ header > .top--menu ul > li {
 	top: 0;
 	right: 0;
 	transition: all 0.5s;
-	z-index: 997;
+	z-index: 1001;
 }
 #header.header-scrolled {
-box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.12);
-background: rgba(34, 34, 34, 0.9);
-transition: opacity 500ms ease;
+	box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.12);
+	background: rgba(34, 34, 34, 0.9);
+	transition: opacity 500ms ease;
 }
 header > .reveal--menu {
 	display: none;
@@ -133,8 +140,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 	position: fixed;
 	color: #fff;
     right: 15px;
-    z-index: 999;
-    top: 13px;
+    z-index: 1005;
+    top: 12px;
     border: 0;
     background: none;
     font-size: 14px;
@@ -147,7 +154,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	position: fixed;
 	color: #fff;
     left: 15px;
-    z-index: 999;
+    z-index: 1005;
     top: 13px;
     border: 0;
     background: none;
@@ -284,6 +291,9 @@ section.hero > picture > img {
       object-fit: cover;
       object-position: center center;
     }
+}
+section.hero > div > .caption {
+	display: none;
 }
 section.slider {
 	padding: 0;
@@ -436,7 +446,7 @@ div.scroll > ul.scroll-courses > li > a > .course > img {
 }
 .caption {
     position: absolute;
-    bottom: 1em;
+	bottom: 1rem;
     left: 1em;
     z-index: 1;
     text-transform: uppercase;
@@ -496,6 +506,7 @@ ul.course-spec > li > .card > .card--head > img {
 	width: 70px;
 	border-radius: .25rem;
 	margin-right: 1rem;
+	max-height: 51px;
 }
 ul.announcements > li > .card > .card-head > img {
 	width: 45px;
@@ -708,7 +719,7 @@ button#myBtn2 {
 	color: #fff;
 	right: 40px;
 	z-index: 999;
-	top: 12px;
+	top: 13px;
 	border: 0;
 	background: none;
 	font-size: 14px;
@@ -902,8 +913,24 @@ footer ul li {
 		z-index: 2;
 		bottom: 4rem;
 	}
+	section.hero > div > #caption-hero {
+		top: 9.2rem;
+		z-index: 1000;
+		left: 7rem;
+		max-width: 30rem;
+		max-height: 170px;
+		display: flex;
+		flex-direction: column;
+	}
+	section.hero > div > #caption-hero .caption-title {
+		font-size: 2.5rem;
+	}
+	section.hero > div > #caption-hero .caption-subtitle {
+		font-size: 1.6rem;
+		text-transform: capitalize;
+	}
 	section.slider {
-		margin-top: -10rem;
+		margin-top: -7rem;
 		position: relative;
 		z-index: 3;
 	}
@@ -911,6 +938,9 @@ footer ul li {
 		margin: 0 7rem;
 		z-index: 3;
 		position: relative;
+	}
+	section.home-section {
+		position: inherit;
 	}
 	section > article > .cta {
 		display: grid;
@@ -920,6 +950,26 @@ footer ul li {
 	}
 	article {
 		margin: 2.5rem 0;
+	}
+	article.browse-- {
+		margin: 1.5rem 0;
+	}
+	article.use-content {
+		position: absolute;
+		top: 15rem;
+		z-index: 1000;
+		width: 30rem;
+		left: 7rem;
+	}
+	article.use-content p {
+		text-align: left;
+		text-shadow: 0 0 10px #000;
+	}
+	article.use-content .cta {
+		grid-gap: 1rem;
+	}
+	article.use-content .cta a {
+		padding: 16px;
 	}
 	article.course-action {
 		display: flex;
@@ -1015,9 +1065,9 @@ footer ul li {
 		margin: 0 0.5rem;
 	}
 	div.scroll > ul.course-slider > li > a > .course {
-		min-width: 280px;
+		min-width: 250px;
 		margin: 0 .4rem;
-		max-height: none;
+		max-height: 180px;
 	}
 	div.scroll > ul.course-slider > li > a > .course .caption {
 		bottom: 1em;
