@@ -170,7 +170,7 @@ body.mobile-nav-active #mobile-nav {
 #mobile-nav {
     position: fixed;
     top: 0;
-    padding: 1.8rem;
+    padding: 3rem 1.8rem;
     bottom: 0;
     z-index: 998;
     background: rgba(0, 0, 0, 0.8);
@@ -271,9 +271,21 @@ section.hero:after {
 	z-index: 2;
 	bottom: 4rem;
 }
-section.hero > picture {
-	display: flex;
-	flex-basis: 100%;
+section.hero > div > #caption-hero {
+    z-index: 1000;
+    max-width: 30rem;
+    max-height: 170px;
+    display: flex;
+	flex-direction: column;
+	bottom: 13rem;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	left: 0rem;
+}
+section.hero > div > #caption-hero .caption-title {
+    font-size: 2rem;
+    margin-bottom: .2em;
 }
 section.hero > img {
 	display: flex;
@@ -344,6 +356,8 @@ article {
 }
 section.wrapper {
 	padding-top: 0;
+	position: relative;
+	z-index: 4;
 }
 ul.brand-icon-set {
 	display: grid;
@@ -605,18 +619,25 @@ div.scroll > ul.scroll-courses > li > a > .course {
 	overflow: hidden;
 }
 div.scroll > ul.course-slider > li > a > .course {
-	min-width: 130px;
+	min-width: 85px;
 	margin: 0 .1rem;
-	max-height: 100px;
+	max-height: 65px;
+}
+div.scroll > ul.course-slider > li > a > .course::after {
+	content: '';
+	background: linear-gradient(to top, black, transparent);
+	position: absolute;
+	bottom: 0rem;
+	display: block;
+	width: 100%;
+	height: 50%;
+	left: 0rem;
 }
 div.scroll > ul.course-slider > li > a > .course .caption {
     bottom: .8em;
     left: .6em;
 }
-div.scroll > ul.course-slider > li > a > .course .caption .caption-title {
-	font-size: .8em;
-	margin-bottom: -.6rem;
-}
+div.scroll > ul.course-slider > li > a > .course .caption .caption-title,
 div.scroll > ul.course-slider > li > a > .course .caption .caption-subtitle {
 	display: none;
 }
@@ -718,8 +739,8 @@ button#myBtn2 {
 	position: fixed;
 	color: #fff;
 	right: 40px;
-	z-index: 999;
-	top: 13px;
+	z-index: 1005;
+	top: 11px;
 	border: 0;
 	background: none;
 	font-size: 14px;
@@ -902,16 +923,22 @@ footer ul li {
 	section.hero {
 		display: flex;
 		max-height: 600px;
+		background-color: #000000;
+		justify-content: flex-end;
+	}
+	section.hero > img {
+		width: 80%;
 	}
 	section.hero:after {
 		display: block;
 		content: ' ';
 		background: url('../img/vignette-bg.png') center/100% 100% no-repeat;
 		position: absolute;
-		width: 100%;
+		width: 80%;
 		height: 100%;
 		z-index: 2;
 		bottom: 4rem;
+		left: 20%;
 	}
 	section.hero > div > #caption-hero {
 		top: 9.2rem;
@@ -921,6 +948,8 @@ footer ul li {
 		max-height: 170px;
 		display: flex;
 		flex-direction: column;
+		justify-content: normal;
+		align-items: flex-start;
 	}
 	section.hero > div > #caption-hero .caption-title {
 		font-size: 2.5rem;
@@ -1077,6 +1106,7 @@ footer ul li {
 		font-size: 1.3rem;
 		margin-bottom: .2rem;
 	}
+	div.scroll > ul.course-slider > li > a > .course .caption .caption-title,
 	div.scroll > ul.course-slider > li > a > .course .caption .caption-subtitle {
 		display: flex;
 	}
