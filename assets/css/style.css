@@ -423,10 +423,11 @@ ul.course-list > li {
 	overflow: hidden;
 	position: relative;
 }
-ul.course-list > li > a {
+ul.course-list > li > a,
+ul.course-list > li > a > div {
 	position: relative;
 }
-ul.course-list > li > a > img,
+ul.course-list > li > a > div > img,
 div.scroll > ul.scroll-courses > li > a > .course > img {
 	width: 100%;
 	max-height: 200px;
@@ -625,7 +626,8 @@ div.scroll > ul.course-slider > li > a > .course {
 	max-height: 65px;
 }
 div.scroll > ul.course-slider > li > a > .course::after,
-ul.course-list li a::after {
+ul.course-list li a > .course::after,
+div.scroll > ul.scroll-courses > li > a > .course::after {
 	content: '';
 	background: linear-gradient(to top, black, transparent);
 	position: absolute;
@@ -1047,10 +1049,10 @@ footer ul li {
 	ul.course-list li:first-child {
 		width: 100%;
 	}
-	ul.course-list li:first-child > a > img {
+	ul.course-list li:first-child > a > div > img {
 		object-position: 50% 30%;
 	}
-	ul.course-list > li > a > img {
+	ul.course-list > li > a > div > img {
 		max-height: 300px;
 	}
 	ul.testimonials {
@@ -1106,6 +1108,9 @@ footer ul li {
 		min-width: 300px;
 		margin: 0 .4rem;
 		max-height: 180px;
+	}
+	#available > ul.course-list > li > a > .course {
+		width: 100%;
 	}
 	div.scroll > ul.course-slider > li > a > .course .caption {
 		bottom: 1em;
