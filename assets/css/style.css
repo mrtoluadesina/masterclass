@@ -421,6 +421,7 @@ ul.course-list > li {
 	-moz-transition: background-image 150ms ease;
 	transition: background-image 150ms ease;
 	overflow: hidden;
+	position: relative;
 }
 ul.course-list > li > a {
 	position: relative;
@@ -623,7 +624,8 @@ div.scroll > ul.course-slider > li > a > .course {
 	margin: 0 .1rem;
 	max-height: 65px;
 }
-div.scroll > ul.course-slider > li > a > .course::after {
+div.scroll > ul.course-slider > li > a > .course::after,
+ul.course-list li a::after {
 	content: '';
 	background: linear-gradient(to top, black, transparent);
 	position: absolute;
@@ -929,6 +931,13 @@ footer ul li {
 	section.hero > img {
 		width: 80%;
 	}
+	section.single-course > img {
+		width: 100%;
+	}
+	section.single-course:after {
+		width: 100% !important;
+		left: 0 !important;
+	}
 	section.hero:after {
 		display: block;
 		content: ' ';
@@ -1094,7 +1103,7 @@ footer ul li {
 		margin: 0 0.5rem;
 	}
 	div.scroll > ul.course-slider > li > a > .course {
-		min-width: 250px;
+		min-width: 300px;
 		margin: 0 .4rem;
 		max-height: 180px;
 	}
@@ -1133,5 +1142,11 @@ footer ul li {
 	}
 	div.cta-section {
 		margin: 0 -4rem;
+	}
+	section.hero > div > #caption-hero {
+		top: 5rem;
+	}
+	article.use-content {
+		top: 11rem;
 	}
 }

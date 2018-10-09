@@ -84,11 +84,10 @@ $(document).ready(function(){
     $("#mobile-nav, #mobile-nav-toggle, #mobile-search, #search-toggle").hide();
   }
 
-
-    // Slider
+    //Slider
     $(document).ready(function(){
         var firstLoad = $('section.slider li:first-child img').attr('src');
-        $('.show-course').attr('src',firstLoad);
+        $('.show-course').attr('src',firstLoad).fadeIn();
         var $content = $('section.slider li:first-child .course .caption').clone().prop({
             id: 'caption-hero'
         });
@@ -96,13 +95,13 @@ $(document).ready(function(){
     })
     $('.course-item').click(function(){
         var srcimg = $(this).attr('src');
-        $(".show-course").attr('src',srcimg);
+        $(".show-course").attr('src',srcimg).fadeIn();
         var new_title = $(this).parent('.course').find('.caption .caption-title');
         var new_subtitle = $(this).parent('.course').find('.caption .caption-subtitle');
         $('#caption-hero .caption-title').text(new_title.text());
         $('#caption-hero .caption-subtitle').text(new_subtitle.text());
     });
-
+ 
     // Modal
     $(document).ready(function(){
         $('#myBtn, #myBtn2').click(function(){
