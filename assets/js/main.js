@@ -85,14 +85,14 @@ $(document).ready(function(){
   }
 
     //Slider
-    $(document).ready(function(){
-        var firstLoad = $('section.slider li:first-child img').attr('src');
-        $('.show-course').attr('src',firstLoad).fadeIn();
-        var $content = $('section.slider li:first-child .course .caption').clone().prop({
-            id: 'caption-hero'
-        });
-        $('section.hero > div').append($content);
-    })
+    // $(document).ready(function(){
+    //     var firstLoad = $('section.slider li:first-child img').attr('src');
+    //     $('.show-course').attr('src',firstLoad).fadeIn();
+    //     var $content = $('section.slider li:first-child .course .caption').clone().prop({
+    //         id: 'caption-hero'
+    //     });
+    //     $('section.hero > div').append($content);
+    // })
     $('.course-item').click(function(){
         var srcimg = $(this).attr('src');
         $(".show-course").attr('src',srcimg).fadeIn();
